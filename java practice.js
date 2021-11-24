@@ -25,9 +25,51 @@ console.log(items);
 
 //assigning object member to a new seperate constant or variable
 const address={
-    street:'',
-    city:'',
-    country:'',
+    street:25,
+    city:'bwp',
+    country:'pakistan',
 }
 const {street:st,city:ct} = address;
 console.log(st,ct)
+
+//spread operator
+const first={name:"Ahmed"}
+const second={age:25}
+const combined ={ ...first , ...second}
+console.log(combined)
+
+//Classes
+class persons{
+    constructor(name){
+        this.name=name;
+    }
+    walk(){
+        console.log("walk");
+    }
+};
+const person1= new persons('zainab')
+console.log(person1)
+const person2= new persons('zain')
+console.log(person2)
+const person3= new persons('rameen')
+console.log(person3)
+
+//inheritance
+class Teachers extends persons{
+    constructor(name,degree){
+        super(name)
+        this.degree=degree
+    }
+    teach(){
+        console.log("teach");
+    }
+}
+const teacher = new Teachers('amna','M.phill')
+console.log(teacher)
+const teacher1 = new Teachers('Aleena','Inter')
+console.log(teacher1)
+const teacher2 = new Teachers('Rida','Mster in CS')
+console.log(teacher2)
+
+
+
